@@ -2,7 +2,7 @@ import CardVehiculo from './CardVehiculo'
 
 function ListaVehiculos({ vehiculos }) {
   return (
-    <div>
+    <div className="lista-vehiculos">
       {vehiculos.map((vehiculo) => (
         <CardVehiculo
           key={vehiculo.patente}

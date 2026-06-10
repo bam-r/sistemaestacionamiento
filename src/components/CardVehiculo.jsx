@@ -1,7 +1,7 @@
 
 function CardVehiculo({ vehiculo }) {
   return (
-    <div>
+    <div className="card-vehiculo">
       <p>{vehiculo.patente}</p>
     </div>
   )
