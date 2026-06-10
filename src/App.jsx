@@ -1,7 +1,11 @@
 import { useState } from 'react'
+import Formulario from './components/Formulario'
+import ListaVehiculos from './components/ListaVehiculos'
+import './App.css'
+
 
 function App() {
-  const[vehiculos, setVehiculos] = useState([]) 
+  const [vehiculos, setVehiculos] = useState([])
 
   const agregarVehiculo = (nuevoVehiculo) => {
     setVehiculos([...vehiculos, nuevoVehiculo])
@@ -9,18 +13,24 @@ function App() {
 
   const cupos = 10 - vehiculos.length
 
-  return(
+  return (
     <>
-    <h1>Gestión de estacionamientos</h1>
-    <p> cupos diponibles : {cupos}</p>
+      <header>
+        <h1>Gestión de Estacionamientos</h1>
+      </header>
 
+      <main>
+        <p>Cupos disponibles: {cupos}</p>
+
+        <Formulario
+          onAgregarVehiculo={agregarVehiculo}
+          cuposDisponibles={cupos}
+        />
+
+        <ListaVehiculos vehiculos={vehiculos} />
+      </main>
     </>
   )
-    
-    
-  
-
-
 }
 
 export default App

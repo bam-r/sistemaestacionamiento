@@ -1,5 +1,4 @@
 
-
 function CardVehiculo({ vehiculo }) {
   return (
     <div>
